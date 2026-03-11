@@ -1,5 +1,11 @@
 # Comparing VAE vs $\beta$-VAE vs CVAE generative neual network models on the MNIST dataset
 
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?logo=python&logoColor=white)
+
 In this project, I implemented a general VAE Python class that can adapt to any of the models above. The class is built using [PyTorch](https://pytorch.org/) under the standard [``torch.nn.Module``](https://docs.pytorch.org/docs/stable/generated/torch.nn.Module.html) structure and trained with its [``torch.optim``](https://docs.pytorch.org/docs/stable/optim.html) API. Hence, all of the [``torch.nn``](https://docs.pytorch.org/docs/stable/nn.html) methods are compatible with this class, including the posibility of running the model in an NVIDIA GPU. 
 
 As any Machine Learning model class, it implements its own ``.fit`` method to train the model on some dataset and also implements a ``.rsample`` method to draw a random sample of generated values in the original space. All the code concerning such implementation can be found in the [vae.py](vae.py) file.
@@ -9,16 +15,16 @@ This code can be used for new projects, when an existant implementation of a VAE
 In the other hand, the [test.ipynb](test.ipynb) is a Jupyter Notebook that implements a direct comparision of these models when trained on the famous [MNIST dataset](https://en.wikipedia.org/wiki/MNIST_database). Such comparision includes 
 
 ### Data reconstruction
-<img src="assets/reconstruction.png" width=600>
+<img src="assets/reconstruction.png" width=800>
 
 ### Latent space visualization
-<img src="assets/latent_space.png" width=600>
+<img src="assets/latent_space.png" width=800>
 
 ### Image interpolation
-<img src="assets/interpolation.png" width=600>
+<img src="assets/interpolation.png" width=800>
 
 ### Image generation
-<img src="assets/cvae_random_sample.png" width=600>
+<img src="assets/cvae_random_sample.png" width=800>
 
 ## Generative Models
 
