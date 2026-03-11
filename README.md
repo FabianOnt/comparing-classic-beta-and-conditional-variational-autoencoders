@@ -41,8 +41,10 @@ In the past decade, generative models have become more and more complex with the
 Let $x$ and $z$ be random variables with some proposed distributions
 
 ```math
-z\sim p(z|\theta)\\
-x|z\sim p(x|z,\theta)
+\begin{align*}
+z &\sim p(z|\theta)\\
+x|z &\sim p(x|z,\theta)
+\end{align*}
 ```
 
 Hence, their joint distribution is given by $`p(x,z|\theta) = p(z|\theta)p(x|z,\theta)`$.
@@ -94,8 +96,10 @@ L(\theta,\phi,x,\beta) = \mathbb{E}_{z\sim q(z|x,\phi)}\left[\log\ p(x|z,\theta)
 A Conditional VAE (CVAE) introduces conditional information (e.g. class labels) into both the encoder and decoder. By conditioning on $y$, the latent variable $z$ only needs to model the variability of $x$ given that condition, which helps the model learn more structured latent representations.
 
 ```math
-z\sim p(z|y,\theta)\\
-x|z\sim p(x|y,z,\theta)
+\begin{align*}
+z &\sim p(z|y,\theta)\\
+x|z &\sim p(x|y,z,\theta)
+\end{align*}
 ```
 
 ## MNIST dataset
